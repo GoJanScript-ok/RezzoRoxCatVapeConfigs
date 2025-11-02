@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RezzoRox's Configs on CatVape</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+    body {
+      background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
+      color: #00eaff;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-shadow: 0 0 10px #00eaff;
+      margin-bottom: 40px;
+    }
+
+    .tab-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      background: transparent;
+      border: 2px solid #00eaff;
+      color: #00eaff;
+      font-size: 1rem;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #00eaff;
+      color: #000;
+      box-shadow: 0 0 20px #00eaff;
+    }
+
+    .content {
+      margin-top: 30px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .download-btn {
+      background: #00eaff;
+      color: #000;
+      border: none;
+      padding: 10px 25px;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 20px #00eaff;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: #00c7d3;
+      box-shadow: 0 0 30px #00c7d3;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      color: #00eaff80;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>RezzoRox's Configs on CatVape</h1>
+
+  <div class="tab-buttons">
+    <button id="closetBtn">Closet Cheating</button>
+    <button id="legitBtn">Legit Cheating</button>
+  </div>
+
+  <div id="closetContent" class="content">
+    <p>These are RezzoRox's Closet Configs.</p>
+    <button class="download-btn" onclick="window.location.href='https://www.mediafire.com/file/8h6w79su6j8k8x8/ClosetCheating.zip/file'">
+      Download
+    </button>
+  </div>
+
+  <div id="legitContent" class="content">
+    <p>These are RezzoRox's Legit Configs.</p>
+    <button class="download-btn" onclick="window.location.href='https://www.mediafire.com/file/l8cqk5gssso16vj/Legitcheating.zip/file'">
+      Download
+    </button>
+  </div>
+
+  <footer>© 2025 RezzoRox | Futuristic UI Demo</footer>
+
+  <script>
+    const closetBtn = document.getElementById('closetBtn');
+    const legitBtn = document.getElementById('legitBtn');
+    const closetContent = document.getElementById('closetContent');
+    const legitContent = document.getElementById('legitContent');
+
+    closetBtn.onclick = () => {
+      closetContent.style.display = 'flex';
+      legitContent.style.display = 'none';
+    };
+
+    legitBtn.onclick = () => {
+      legitContent.style.display = 'flex';
+      closetContent.style.display = 'none';
+    };
+  </script>
+</body>
+</html>
